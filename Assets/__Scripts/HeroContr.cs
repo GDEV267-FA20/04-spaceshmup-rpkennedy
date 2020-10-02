@@ -10,7 +10,15 @@ public class HeroContr : MonoBehaviour
     public float speed;
     public float rollMult;
     public float pitchMult;
-    public float shieldLevel;
+    public float gameRestartDelay;
+    public GameObject projPrefab;
+    public float projSpeed;
+
+    [Header("Idk man")]
+    [SerializeField]
+    private float _shieldLevel;
+
+    private GameObject lastTriggerGo = null;
 
     void Awake()
     {
@@ -40,9 +48,56 @@ public class HeroContr : MonoBehaviour
         transform.position = pos;
 
         transform.rotation = Quaternion.Euler(yAxis * pitchMult, xAxis * rollMult, 0);
+
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        {
+            TempFire();
+        }
     }
-    void FixedUpdate()
+
+    void TempFire()
     {
+        GameObject projGO = Instantiate<GameObject>(projPrefab);
+        projGO.transform.position = transform.position;
+        Rigidbody rb = projGO.GetComponent<Rigidbody>();
+        rb.velocity = Vector3.up * projSpeed;
+    }
+
+    void OnTriggerEnter(Collider coll)
+    {
+        Transform rootT = coll.gameObject.transform.root;
+        GameObject go = rootT.gameObject;
+
+        if (go == lastTriggerGo) return;
         
+        lastTriggerGo = go;                                              
+               
+        if (go.tag == "Enemy")
+        {  
+            shieldLevel--;     
+            Destroy(go);    
+        }
+        else
+        {
+            print("Triggered by non-Enemy: " + go.name);      
+        }
+    }
+
+    public float shieldLevel
+    {
+        get
+        {
+            return (_shieldLevel);
+        }
+        set
+        {
+            _shieldLevel = Mathf.Min(value, 4);
+
+            if (value < 0)
+            {
+                Destroy(this.gameObject);
+                Main.S.DelayedRestart(gameRestartDelay);
+            }
+        }
     }
 }
