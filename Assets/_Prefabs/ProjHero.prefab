@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4324089989879589491}
   - component: {fileID: 1590566205438389920}
   - component: {fileID: 5498436835514875683}
+  - component: {fileID: 8387006211223717488}
   m_Layer: 11
   m_Name: ProjHero
   m_TagString: ProjHero
@@ -134,3 +135,15 @@ MonoBehaviour:
   offLeft: 0
   offUp: 0
   ofFDown: 0
+--- !u!114 &8387006211223717488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97473510343209425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb3f35a0e939bc544b90820668a1231d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -41,6 +41,17 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter(Collision coll)
+    {
+        GameObject collGO = coll.gameObject;
+
+        if( collGO.tag == "ProjHero")
+        {
+            Destroy(collGO);
+            Destroy(gameObject);
+        }
+    }
+
     public virtual void Move()
     {
         Vector3 temp = pos;

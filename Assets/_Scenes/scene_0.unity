@@ -406,7 +406,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e45b2fec72e12b847bec233bfd99f5e5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -724,7 +724,7 @@ MonoBehaviour:
   gameRestartDelay: 2
   projPrefab: {fileID: 97473510343209425, guid: 03daf17a1bb83544e9c7af0f0407883f, type: 3}
   projSpeed: 40
-  _shieldLevel: 1
+  _shieldLevel: 4
 --- !u!4 &1809572149
 Transform:
   m_ObjectHideFlags: 0
@@ -829,7 +829,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: aa7d5cb7c5d9bf648b4c6cf6c1276fb3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
