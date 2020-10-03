@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     public float health;
     public int score;
 
-    private BoundsCheck bndCheck;
+    protected BoundsCheck bndCheck;
 
     public Vector3 pos
     {

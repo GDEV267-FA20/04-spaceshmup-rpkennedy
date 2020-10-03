@@ -20,16 +20,16 @@ public class HeroContr : MonoBehaviour
 
     private GameObject lastTriggerGo = null;
 
+    public delegate void WeaponFireDelegate();
+    public WeaponFireDelegate fireDelegate;
+
     void Awake()
     {
         if (S == null)
         {
             S = this;
         }
-        else
-        {
-            Debug.Log("Hero.Awake() - S already exists");
-        }
+        fireDelegate += TempFire;
     }
 
     void Start()
@@ -49,9 +49,9 @@ public class HeroContr : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(yAxis * pitchMult, xAxis * rollMult, 0);
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-        {
-            TempFire();
+        if ((Input.GetAxis("Jump") == 1 || Input.GetMouseButtonDown(0)) && fireDelegate != null)
+        {           
+            fireDelegate();   
         }
     }
 
@@ -61,6 +61,11 @@ public class HeroContr : MonoBehaviour
         projGO.transform.position = transform.position;
         Rigidbody rb = projGO.GetComponent<Rigidbody>();
         rb.velocity = Vector3.up * projSpeed;
+
+        Projectile proj = projGO.GetComponent<Projectile>();    
+        proj.type = WeaponType.blaster;
+        float tSpeed = Main.GetWeaponDefinition(proj.type).velocity;
+        rb.velocity = Vector3.up * tSpeed;
     }
 
     void OnTriggerEnter(Collider coll)
