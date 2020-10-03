@@ -29,7 +29,6 @@ public class HeroContr : MonoBehaviour
         {
             S = this;
         }
-        fireDelegate += TempFire;
     }
 
     void Start()
@@ -49,25 +48,12 @@ public class HeroContr : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(yAxis * pitchMult, xAxis * rollMult, 0);
 
-        if ((Input.GetAxis("Jump") == 1 || Input.GetMouseButtonDown(0)) && fireDelegate != null)
+        if (Input.GetAxis("Jump") == 1 && fireDelegate != null)
         {           
             fireDelegate();   
         }
     }
-
-    void TempFire()
-    {
-        GameObject projGO = Instantiate<GameObject>(projPrefab);
-        projGO.transform.position = transform.position;
-        Rigidbody rb = projGO.GetComponent<Rigidbody>();
-        rb.velocity = Vector3.up * projSpeed;
-
-        Projectile proj = projGO.GetComponent<Projectile>();    
-        proj.type = WeaponType.blaster;
-        float tSpeed = Main.GetWeaponDefinition(proj.type).velocity;
-        rb.velocity = Vector3.up * tSpeed;
-    }
-
+    
     void OnTriggerEnter(Collider coll)
     {
         Transform rootT = coll.gameObject.transform.root;

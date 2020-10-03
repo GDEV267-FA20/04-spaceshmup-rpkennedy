@@ -325,7 +325,7 @@ MonoBehaviour:
     letter: B
     color: {r: 0.9921569, g: 0.16470589, b: 0.5686275, a: 0}
     projectilePrefab: {fileID: 97473510343209425, guid: 03daf17a1bb83544e9c7af0f0407883f, type: 3}
-    projectileColor: {r: 0, g: 0, b: 0, a: 0}
+    projectileColor: {r: 0.9921569, g: 0.16470589, b: 0.5686275, a: 0}
     damageOnHit: 1
     continuousDamage: 0
     delayBetweenShots: 0.2
@@ -333,7 +333,7 @@ MonoBehaviour:
   - type: 2
     letter: S
     color: {r: 0, g: 0.82619095, b: 1, a: 0}
-    projectilePrefab: {fileID: 0}
+    projectilePrefab: {fileID: 97473510343209425, guid: 03daf17a1bb83544e9c7af0f0407883f, type: 3}
     projectileColor: {r: 0.23529413, g: 0.7254902, b: 0.9176471, a: 0}
     damageOnHit: 1
     continuousDamage: 0

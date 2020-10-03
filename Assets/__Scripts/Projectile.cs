@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    private BoundsCheck bndCheck;
-    private Renderer rend;
+    private BoundsCheck bndCheck;    
 
     [Header("No worries m8:")]
     public Rigidbody rb;
+    public Renderer rend;
 
     [SerializeField]
     private WeaponType _type;
-
 
     public WeaponType type
     {
@@ -24,6 +23,7 @@ public class Projectile : MonoBehaviour
         {
             SetType(value);
         }
+
     }
     void Awake()
     {

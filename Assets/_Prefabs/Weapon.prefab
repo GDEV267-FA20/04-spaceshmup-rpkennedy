@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2062585677929927553}
   - component: {fileID: 526885982838581664}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Weapon
-  m_TagString: Untagged
+  m_TagString: Hero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,6 +45,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23cde34871cfee47ab43813f9867636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _type: 1
+  def:
+    type: 0
+    letter: 
+    color: {r: 1, g: 1, b: 1, a: 1}
+    projectilePrefab: {fileID: 0}
+    projectileColor: {r: 1, g: 1, b: 1, a: 1}
+    damageOnHit: 0
+    continuousDamage: 0
+    delayBetweenShots: 0
+    velocity: 20
+  collar: {fileID: 0}
+  lastShotTime: 0
 --- !u!1 &7381793066787962043
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +69,7 @@ GameObject:
   - component: {fileID: 8602370769602629894}
   - component: {fileID: 5903963197699791389}
   - component: {fileID: 1508065791276551202}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +150,7 @@ GameObject:
   - component: {fileID: 7425656545690238870}
   - component: {fileID: 3725053351982874223}
   - component: {fileID: 1767813073727882007}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
