@@ -223,9 +223,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotMinMax: {x: 15, y: 90}
-  driftMinMax: {x: 0.25, y: 2}
+  driftMinMax: {x: 1, y: 3}
   lifeTime: 6
-  fadeTime: 4
+  fadeTime: 3
   type: 2
   cube: {fileID: 0}
   letter: {fileID: 0}

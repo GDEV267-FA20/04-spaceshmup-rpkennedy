@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showDamageDuration: 0.1
+  powerUpDropChance: 0.2
   speed: 10
   fireRate: 0.3
   health: 10
@@ -205,7 +206,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showDamageDuration: 0.1
-  speed: 10
+  powerUpDropChance: 0.35
+  speed: 8
   fireRate: 0.4
   health: 8
   score: 250
