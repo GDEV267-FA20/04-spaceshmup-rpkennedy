@@ -257,10 +257,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9822ce292e90d4892361ed4ea969de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  showDamageDuration: 0.1
+  speed: 4
   fireRate: 0.3
   health: 10
   score: 100
+  originalColors: []
+  materials: []
+  showingDamage: 0
+  damageDoneTime: 0
+  notifiedOfDestruction: 0
 --- !u!114 &6052734404647878167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,10 +300,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e71257bf555c5a40b1bd17a5db14bfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  showDamageDuration: 0.1
+  speed: 4
   fireRate: 0.8
   health: 15
   score: 500
+  originalColors: []
+  materials: []
+  showingDamage: 0
+  damageDoneTime: 0
+  notifiedOfDestruction: 0
   lifeTime: 5
   points: []
   birthTime: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float showDamageDuration = 0.1f;
+    public float powerUpDropChance = 0.2f;
 
     [Header("All you m8:")]
     public float speed;
@@ -91,7 +92,8 @@ public class Enemy : MonoBehaviour
                 ShowDamage();
 
                 if (health <= 0)
-                {                    
+                {
+                    if (!notifiedOfDestruction) Main.S.ShipDestroyed(this);
                     Destroy(this.gameObject);
                 }
 
