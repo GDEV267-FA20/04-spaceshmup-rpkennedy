@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showDamageDuration: 0.1
-  powerUpDropChance: 0.3
+  powerUpDropChance: 0.4
   speed: 8
   fireRate: 0.3
   health: 7

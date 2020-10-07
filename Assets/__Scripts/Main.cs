@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;     
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Main : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Main : MonoBehaviour
     public float enemyDefaultPadding = 1.5f;
     public WeaponDefinition[] weaponDefinitions;
     public GameObject prefabPowerUp;
+    [HideInInspector]
     public WeaponType[] powerUpFrequency = new WeaponType[]
     {
         WeaponType.blaster, WeaponType.spread,
@@ -23,7 +25,7 @@ public class Main : MonoBehaviour
     private BoundsCheck bndCheck;
 
     void Awake()
-    {
+    {     
         S = this;
         bndCheck = GetComponent<BoundsCheck>();
         Invoke("SpawnEnemy", 1f / enemySpawnPerSecond);
@@ -88,5 +90,10 @@ public class Main : MonoBehaviour
             pu.SetType(puType);
             pu.transform.position = e.transform.position;
         }
+    }
+
+    void Update()
+    {
+
     }
 }
