@@ -15,6 +15,8 @@ public class Main : MonoBehaviour
     public float enemyDefaultPadding = 1.5f;
     public WeaponDefinition[] weaponDefinitions;
     public GameObject prefabPowerUp;
+    public GameObject scoreGO;
+    public Score score;
     [HideInInspector]
     public WeaponType[] powerUpFrequency = new WeaponType[]
     {
@@ -84,12 +86,13 @@ public class Main : MonoBehaviour
         {
             int ndx = Random.Range(0, powerUpFrequency.Length);
             WeaponType puType = powerUpFrequency[ndx];
-
+            
             GameObject go = Instantiate(prefabPowerUp) as GameObject;
             PowerUp pu = go.GetComponent<PowerUp>();
             pu.SetType(puType);
             pu.transform.position = e.transform.position;
         }
+        score.AddScore(e.score);
     }
 
     void Update()

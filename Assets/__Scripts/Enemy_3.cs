@@ -47,6 +47,6 @@ public class Enemy_3 : Enemy
         u = u - 0.2f * Mathf.Sin(u * Mathf.PI * 2);
         p01 = (1 - u) * points[0] + u * points[1];
         p12 = (1 - u) * points[1] + u * points[2];
-        pos = (1 - u) * p01 + u * p12;
+        pos = ((1 - u) * p01 + u * p12)/3;
     }
 }

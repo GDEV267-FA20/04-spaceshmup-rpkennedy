@@ -7,7 +7,6 @@ public class Enemy_2 : Enemy
     [Header("Set in Inspector: Enemy_2")]
     public float sinEccentricity = 0.6f;
     public float lifeTime = 10;
-
     [Header("No worries m8:")]
     public Vector3 p0;
     public Vector3 p1;

@@ -259,10 +259,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showDamageDuration: 0.1
   powerUpDropChance: 0.2
-  speed: 4
+  speed: 3
   fireRate: 0.3
   health: 10
-  score: 100
+  score: 75
   originalColors: []
   materials: []
   showingDamage: 0
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showDamageDuration: 0.1
   powerUpDropChance: 0.9
-  speed: 5
+  speed: 3
   fireRate: 0.8
   health: 3
   score: 75
