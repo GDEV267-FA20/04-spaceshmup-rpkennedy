@@ -853,27 +853,10 @@ MonoBehaviour:
   showingDamage: 0
   damageDoneTime: 0
   notifiedOfDestruction: 0
-  parts:
-  - name: Mid
-    phealth: 5
-    protectedBy:
-    - Right
-    - Left
-    go: {fileID: 0}
-    mat: {fileID: 0}
-  - name: Right
-    phealth: 4
-    protectedBy: []
-    go: {fileID: 0}
-    mat: {fileID: 0}
-  - name: Left
-    phealth: 4
-    protectedBy: []
-    go: {fileID: 0}
-    mat: {fileID: 0}
   left: {fileID: 4361694393056243242}
   right: {fileID: 8367860049798080443}
   mid: {fileID: 2834593966505817163}
+  newHealth: 13
 --- !u!1 &6577301511186611955
 GameObject:
   m_ObjectHideFlags: 0
